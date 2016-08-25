@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C2043" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-2G-5Np">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="628" id="n7v-7w-meg"/>
+                                    <constraint firstAttribute="width" constant="600" id="sOu-e4-B12"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="n7v-7w-meg"/>
+                                        <exclude reference="sOu-e4-B12"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="fLf-mP-U83"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="akj-Ua-A7U"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1W-Mn-lCI">
+                                <rect key="frame" x="30" y="25" width="546" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="MGk-K9-bUc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="B1W-Mn-lCI" secondAttribute="width" multiplier="1.1" id="46k-Ng-f0Y"/>
+                            <constraint firstAttribute="centerX" secondItem="fAc-2G-5Np" secondAttribute="centerX" id="4PY-bX-lCL"/>
+                            <constraint firstAttribute="centerX" secondItem="B1W-Mn-lCI" secondAttribute="centerX" constant="-3" id="8nU-Tj-ppx"/>
+                            <constraint firstItem="fAc-2G-5Np" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="BYJ-2c-CLR"/>
+                            <constraint firstAttribute="width" secondItem="B1W-Mn-lCI" secondAttribute="width" multiplier="1.5" id="D7q-5J-JN6"/>
+                            <constraint firstItem="fAc-2G-5Np" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="60" id="J3H-FF-0ly"/>
+                            <constraint firstItem="B1W-Mn-lCI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="5" id="MDO-Q2-8wt"/>
+                            <constraint firstItem="fAc-2G-5Np" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="mn7-YA-MKD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fAc-2G-5Np" secondAttribute="bottom" id="qwb-KH-xYs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fAc-2G-5Np" secondAttribute="trailing" id="vVw-Wo-zTE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mn7-YA-MKD"/>
+                                <exclude reference="vVw-Wo-zTE"/>
+                                <exclude reference="D7q-5J-JN6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="searchField" destination="B1W-Mn-lCI" id="aIk-cm-53f"/>
+                        <outlet property="tableView" destination="fAc-2G-5Np" id="zPy-Rd-ndJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="387"/>
+        </scene>
+    </scenes>
+</document>
