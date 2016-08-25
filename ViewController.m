@@ -27,6 +27,8 @@ static NSString *const BaseURLString = @"api.openweathermap.org/data/2.5/weather
     _KYClient=[Client getInstance];
     _KYClient.delegate=self;
     [self GetWeatherInfoByName:LOCALCITY];
+    UIImageView *tableBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
+    [self.tableView setBackgroundView:tableBg];
 }
 
 - (void)didReceiveMemoryWarning {
