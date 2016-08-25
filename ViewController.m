@@ -22,8 +22,6 @@ static NSString *const BaseURLString = @"api.openweathermap.org/data/2.5/weather
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-     //tableData = [NSMutableArray]
-                  //arrayWithObjects:@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday",@"Sunday",nil];
     _KYClient=[Client getInstance];
     _KYClient.delegate=self;
     [self GetWeatherInfoByName:LOCALCITY];
